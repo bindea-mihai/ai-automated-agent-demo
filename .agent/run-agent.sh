@@ -10,7 +10,15 @@ git config user.name "Claude Agent"
 
 echo "Reading task and system prompt..."
 TASK=$(cat task.md)
-SYSTEM_PROMPT=$(cat CLAUDE.md)
+
+if [ -f "Claude.md" ]; then
+  SYSTEM_PROMPT=$(cat Claude.md)
+elif [ -f "CLAUDE.md" ]; then
+  SYSTEM_PROMPT=$(cat CLAUDE.md)
+else
+  echo "Error: neither Claude.md nor CLAUDE.md was found in repository root."
+  exit 1
+fi
 
 echo "Running Claude agent..."
 claude -p "$TASK" \
