@@ -1,0 +1,38 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+coverage/
+
+# .NET
+**/bin/
+**/obj/
+**/artifacts/
+
+# Database / local runtime files
+*.db-shm
+*.db-wal
+
+# Keep the demo SQLite DB trackable
+!backend/src/Web/app.db
+
+# Docker
+*.tar
