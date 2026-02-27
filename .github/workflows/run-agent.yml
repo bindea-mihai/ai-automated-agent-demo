@@ -1,0 +1,17 @@
+name: Run Claude Agent
+
+on:
+  push:
+    paths:
+      - 'task.md'
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Claude Agent
+        run: |
+          docker run --rm \
+            -e ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}" \
+            -e REPO_URL="https://oauth2:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git" \
+            your-registry/claude-agent:latest
