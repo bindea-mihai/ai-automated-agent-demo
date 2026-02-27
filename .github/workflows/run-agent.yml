@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'task.md'
+  workflow_dispatch:
 
 jobs:
   agent:
