@@ -1,3 +1,3 @@
 # Task: Add another product
 
-Update the products list so that it also includes a new CASCO product called CASCO basic
+Update the product cards so that I can click on them and go to details
