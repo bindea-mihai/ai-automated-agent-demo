@@ -102,6 +102,12 @@ public class ApplicationDbContextInitialiser
                     Name = "RCA",
                     Code = "RCA",
                     Description = "Mandatory third-party liability insurance covering damage caused to other people or property."
+                },
+                new Product
+                {
+                    Name = "CASCO basic",
+                    Code = "CASCO_BASIC",
+                    Description = "Entry-level comprehensive motor insurance covering essential protection against accidental damage and theft."
                 }
             );
 
